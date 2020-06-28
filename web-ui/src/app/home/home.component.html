@@ -1,0 +1,8 @@
+<div class="container">
+  <p>
+    A progress bar:
+    <ngb-progressbar showValue="true" type="success" [value]="progress">
+    </ngb-progressbar>
+  </p>
+  <button (click)="go()" class="btn btn-light" [disabled]="!socket.connected">Go</button>
+</div>
