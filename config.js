@@ -1,0 +1,3 @@
+module.exports = {
+  DYNAMODB_CONNECTIONS_TABLE: process.env.DYNAMODB_CONNECTIONS_TABLE,
+};

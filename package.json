@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/djmeph/serverless-rpc-demo/issues"
   },
-  "homepage": "https://github.com/djmeph/serverless-rpc-demo#readme"
+  "homepage": "https://github.com/djmeph/serverless-rpc-demo#readme",
+  "dependencies": {
+    "sockette": "^2.0.6"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.706.0",
+    "eslint": "^7.3.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
 }
