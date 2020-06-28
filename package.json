@@ -1,0 +1,20 @@
+{
+  "name": "serverless-rpc-demo",
+  "version": "1.0.0",
+  "description": "Serverless RPC demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0",
+    "deploy:dev": "serverless deploy --stage dev --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/djmeph/serverless-rpc-demo.git"
+  },
+  "author": "Norman Witte III",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djmeph/serverless-rpc-demo/issues"
+  },
+  "homepage": "https://github.com/djmeph/serverless-rpc-demo#readme"
+}
