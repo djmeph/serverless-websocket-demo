@@ -1,4 +1,4 @@
-module.exports = async event => ({
-  message: 'Go Serverless v1.0! Your function executed successfully!',
-  event
+module.exports = async (event, context, callback) => callback(null, {
+  statusCode: 200,
+  body: event.requestContext,
 });

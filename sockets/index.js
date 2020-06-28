@@ -1,5 +1,9 @@
+const connections = require('./connections');
+const defaultHandler = require('./default');
+const rpc = require('./rpc');
+
 module.exports = {
-  connections: require('./connections'),
-  default: require('./default'),
-  rpc: require('./rpc')
+  connections,
+  default: defaultHandler,
+  rpc,
 };
