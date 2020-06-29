@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "exit 0",
-    "deploy:dev": "serverless deploy --stage dev --verbose"
+    "deploy:dev": "serverless deploy --stage dev"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,6 @@
     "url": "https://github.com/djmeph/serverless-rpc-demo/issues"
   },
   "homepage": "https://github.com/djmeph/serverless-rpc-demo#readme",
-  "dependencies": {
-    "sockette": "^2.0.6"
-  },
   "devDependencies": {
     "aws-sdk": "^2.706.0",
     "eslint": "^7.3.1",
