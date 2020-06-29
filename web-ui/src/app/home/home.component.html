@@ -4,5 +4,11 @@
     <ngb-progressbar showValue="true" type="success" [value]="progress">
     </ngb-progressbar>
   </p>
-  <button (click)="go()" class="btn btn-light" [disabled]="!socket.connected">Go</button>
+  <button *ngIf="stage === 'go'" (click)="go()" class="btn btn-light" [disabled]="going">
+    <span *ngIf="going" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>&nbsp;Go
+  </button>
+  <button *ngIf="stage === 'next'" (click)="next()" class="btn btn-light" [disabled]="finishing">
+    <span *ngIf="finishing" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>&nbsp;Next
+  </button>
+  <button *ngIf="stage === 'finish'" (click)="finish()" class="btn btn-light">Finish</button>
 </div>
