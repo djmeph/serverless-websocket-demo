@@ -7,11 +7,32 @@ module.exports = async (event, context, callback) => {
     endpoint: `${event.requestContext.domainName}/${event.requestContext.stage}`,
   });
 
-  await new Promise((resolve) => this.setTimeout(resolve, 3000));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 
   await websocket.postToConnection({
     ConnectionId: event.requestContext.connectionId,
-    Data: data,
+    Data: JSON.stringify({ id: data.id, value: 40 }),
+  }).promise();
+
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
+  await websocket.postToConnection({
+    ConnectionId: event.requestContext.connectionId,
+    Data: JSON.stringify({ id: data.id, value: 60 }),
+  }).promise();
+
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
+  await websocket.postToConnection({
+    ConnectionId: event.requestContext.connectionId,
+    Data: JSON.stringify({ id: data.id, value: 80 }),
+  }).promise();
+
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
+  await websocket.postToConnection({
+    ConnectionId: event.requestContext.connectionId,
+    Data: JSON.stringify({ id: data.id, value: 100 }),
   }).promise();
 
   return callback(null, {

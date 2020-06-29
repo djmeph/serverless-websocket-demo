@@ -59,11 +59,17 @@ functions:
     events:
       - websocket:
           route: $default
-  rpc:
-    handler: socket.rpc
+  action1:
+    handler: socket.action1
     events:
       - websocket:
-          route: rpc
+          route: action1
+
+  action2:
+    handler: socket.action2
+    events:
+      - websocket:
+          route: action2
 
 resources:
   Resources:
