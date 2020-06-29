@@ -35,9 +35,6 @@ provider:
 
   stackName: serverless-websocket-demo-${opt:stage}
 
-  deploymentBucket:
-    name: com.serverless-websocket-demo.${self:provider.region}.lambda.deploys
-
   environment:
     NODE_ENV: ${opt:stage}
     DYNAMODB_CONNECTIONS_TABLE:
@@ -83,4 +80,5 @@ resources:
           - AttributeName: connectionId
             KeyType: HASH
         BillingMode: PAY_PER_REQUEST
+
 ```
