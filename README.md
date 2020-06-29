@@ -1,9 +1,9 @@
-# Serverless RPC Demo
+# Serverless Websocket Demo
 
 Example `serverless.yml`
 
 ```yaml
-service: serverless-rpc-demo
+service: serverless-websocket-demo
 
 provider:
   name: aws
@@ -33,17 +33,17 @@ provider:
             - - Fn::GetAtt: [ConnectionsTable, Arn]
               - "*"
 
-  stackName: serverless-rpc-demo-${opt:stage}
+  stackName: serverless-websocket-demo-${opt:stage}
 
   deploymentBucket:
-    name: com.serverless-rpc-demo.${self:provider.region}.lambda.deploys
+    name: com.serverless-websocket-demo.${self:provider.region}.lambda.deploys
 
   environment:
     NODE_ENV: ${opt:stage}
     DYNAMODB_CONNECTIONS_TABLE:
       Ref: ConnectionsTable
 
-  websocketApiName: serverless-rpc-demo-websocket-${opt:stage}
+  websocketApiName: serverless-websocket-demo-websocket-${opt:stage}
   websocketApiRouteSelectionExpression: $request.body.action
 
 functions:
