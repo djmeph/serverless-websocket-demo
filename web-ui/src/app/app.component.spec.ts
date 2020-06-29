@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'serverless-rpc-demo'`, () => {
+  it(`should have as title 'serverless-websocket-demo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('serverless-rpc-demo');
+    expect(app.title).toEqual('serverless-websocket-demo');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('serverless-rpc-demo app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('serverless-websocket-demo app is running!');
   });
 });

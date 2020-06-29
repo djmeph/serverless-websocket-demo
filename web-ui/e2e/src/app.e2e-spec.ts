@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('serverless-rpc-demo app is running!');
+    expect(page.getTitleText()).toEqual('serverless-websocket-demo app is running!');
   });
 
   afterEach(async () => {
